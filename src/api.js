@@ -8,7 +8,7 @@ const getAPIUrl = () => {
   return baseUrl;
 };
 
-const API_BASE_URL = process.env.VITE_API_BASE_URL || getAPIUrl();
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || getAPIUrl();
 const SOUND_DETECTION_URL = process.env.REACT_APP_SOUND_DETECTION_URL || getAPIUrl();
 
 const api = axios.create({
